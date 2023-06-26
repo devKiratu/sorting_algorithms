@@ -23,10 +23,13 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
 
 /* quick sort helpers */
 void q_sort(int *array, int start, int end, size_t size);
 size_t partition(int *array, int start, int end, size_t size);
 void swap_elements(int *array, size_t i, size_t j);
+void q_sort_hoare(int *array, int start, int end, size_t size);
+size_t partition_hoare(int *array, int start, int end, size_t size);
 
 #endif
