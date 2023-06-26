@@ -28,6 +28,8 @@ void insertion_sort_list(listint_t **list)
 			print_list(*list);
 			if (temp->prev != NULL)
 				runner = temp->prev;
+			else
+				runner = temp;
 		}
 		runner = runner->next;
 	}
