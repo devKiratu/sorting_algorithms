@@ -9,9 +9,6 @@
  */
 void quick_sort_hoare(int *array, size_t size)
 {
-	if (array == NULL || size < 2)
-		return;
-
 	q_sort_hoare(array, 0, size - 1, size);
 }
 
@@ -45,17 +42,17 @@ void q_sort_hoare(int *array, int start, int end, size_t size)
  */
 size_t partition_hoare(int *array, int start, int end, size_t size)
 {
-	int i = start - 1, j = end + 1;
+	int i = start - 1, j = end + 1, pivot = array[end];
 
 	while (i < j)
 	{
 		do {
 			i++;
-		} while (array[i] < array[end]);
+		} while (array[i] < pivot);
 
 		do {
 			j--;
-		} while (array[j] > array[end]);
+		} while (array[j] > pivot);
 
 		if (i < j)
 		{
